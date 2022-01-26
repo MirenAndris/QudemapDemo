@@ -76,6 +76,11 @@
 				<div class="galeryConteiner">
 					<div class="galery" id="mainGallery">
 						<!-- Automatically generated gallery content -->
+						{% for pic in pictures %}  
+							<div class="galeryItem">
+						    		<img src='{{pic}}' alt='{{pic}}'/ class="galery_img"> 
+						  	</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
