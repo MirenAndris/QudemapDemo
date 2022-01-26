@@ -6,11 +6,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/',methods = ['POST', 'GET'])
+@app.route('/')
 def root():
     return render_template("index.html")
 
-@app.route('/karte',methods = ['POST', 'GET'])
+@app.route('/karte')
 def raditKarti():
     return render_template("karte.html")
 
