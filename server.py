@@ -2,13 +2,15 @@ from flask import Flask
 from flask import request
 from flask import url_for
 from flask import render_template, make_response
+from modules import dataScraper
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def root():
-    return render_template("index.html")
+    pictures = dataScraper.scrapeData("url","filters")
+    return render_template("index.html", pictures=pictures)
 
 @app.route('/karte')
 def raditKarti():
