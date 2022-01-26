@@ -1,0 +1,335 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+ul, li{
+	text-decoration: none;
+	list-style: none;
+}
+html,body{
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+.wrapper{
+	min-height: 100%;	 
+	display: flex;
+	flex-direction: column;
+}
+.main{
+	flex: 1 1 auto;
+}
+.mainMap{
+	height: 600px;
+	flex: 1 1 auto;
+}
+.graficlogo{
+	background-color: #009688;
+	width: 100%;
+}
+.headerlogo{
+	background-color: #009688;
+	width: 20%;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #009688;
+}
+.header_section{
+	display: flex;
+	align-items: center;
+}
+.header_item{
+	padding: 10px 15px;
+	font-size: 20px;
+	margin-left: 5px;
+}
+.header_item:hover{
+	border-bottom: 2px solid #FFFFFF;
+}
+.header_item_headerButton2{
+	padding: 10px 0px;
+	font-size: 20px;
+	margin-left: 5px;
+	background-color: #00796B;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.hB2{
+	padding: 10px 15px;
+}
+.header_item_headerButton2:hover{
+	background-color: #FFFFFF;
+	transition: 0.5s;
+}
+.header_item_headerButton2:not(:hover){
+	transition: 0.5s;
+}
+.hB2:hover{
+	color: #009688;
+	transition: 0.25s;
+}
+.hB2:not(:hover){
+	transition: 0.25s;
+}
+.headerButton{
+	cursor: pointer;
+}
+.actionList_action{
+	color: #009688;
+}
+nav ul{
+	float: left;
+}
+nav ul li{
+	text-align: center;
+	position: relative;
+}
+nav ul li a{
+	display: block;
+	font-size: 20px;
+	padding: 10px;
+}
+nav ul li ul{
+	display: none;
+	position: absolute;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+}
+nav ul li:hover ul{
+	display: block;
+}
+nav ul li ul li a{
+	padding: 10px 14px;
+}
+nav ul li ul li a:hover{
+	background-color: #B2DFDB;
+	border-radius: 4px;
+}
+.indexFrom{
+	background-image: url('backgroundRIGAcrop.jpg');
+	width: 100%;
+	height: 460px;
+}
+.indexForm1{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	background-color: #FFFFFF;
+	color: #212121;
+	font-family: 'Raleway', sans-serif;
+	opacity: 0.5;
+	width: 100%;
+	border-radius: 6px;
+}
+.indexFform{
+	display: flex;
+	align-items: center;
+}
+.checkboxIndexP{
+	padding: 10px 15px;
+	font-size: 20px;
+	margin-left: 5px;
+}
+.liCena{
+	color:#212121;
+	padding: 10px 15px;
+	margin-left: 5px;
+}
+.input_mekllogs{
+	color: #212121;
+	font-size: 20px;
+	padding: 10px 15px;
+	margin-left: 5px;
+	width: 400px;
+	box-sizing: border-box;
+	border: 0px solid transparent;
+	font-family: 'Raleway', sans-serif;
+}
+.input_cena{
+	color: #212121;
+	font-size: 15px;
+	padding: 10px 15px;
+	margin-top: 6px;
+	width: 200px;
+	box-sizing: border-box;
+	border: 0px solid transparent;
+	font-family: 'Raleway', sans-serif;
+}
+.btnIndexForm{
+	color: #FFFFFF;
+	float: left;
+	width: 100px;
+	border: 0px solid transparent;
+	cursor: pointer;
+	background-color: #00796B;
+	border-radius: 6px;
+	font-size: 20px;
+	padding: 10px 15px;
+	transition: all 0.3s;
+	margin-left: 5px;
+	font-family: 'Raleway', sans-serif;
+}
+.btnIndexForm:hover{
+	background-color: #FFFFFF;
+	color: #009688;
+	border: 1px solid #009688;
+}
+.galeryNosConteiner{
+	padding-top: 30px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+.galeryNos{
+	color: #212121;
+	padding: 10px;
+}
+.galeryNos_bar{
+	width: auto;
+	padding: 10px;
+}
+.skVisu{
+	color: #009688;
+	padding: 15px 10px 15px 10px;
+	font-size: 20px;
+}
+.galeryConteiner{
+	display: flex;
+	justify-content: center;
+}
+.galery{
+	padding-bottom: 15px;
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.galeryItem{
+	width: 20%;
+	padding: 15px;
+}
+p.galery_ielasNos{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.galery_ielasNos{
+	color: #212121;
+}
+.galery_ielasNos_sak{
+	color: #009688;
+	font-weight: bold;
+}
+.galery_cenaNos{
+	color: #212121;
+}
+.galery_infoAbout{
+	color: #212121;
+}
+.galery_img{
+	width: 100%;
+	border-radius: 6px;
+}
+.main2_JauniePiedavajumi{
+	background-color: #B2DFDB;
+}
+footer{
+	width: 100%;
+	height: auto;
+	background-color: #009688;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+footer a{
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-left: 10px;
+}
+footer nav a:hover{
+	border-bottom: 2px solid #FFFFFF;
+	padding-bottom: 2px;
+}
+.footerGRAFlogo{
+	width: 15%;
+	padding: 20px 20px 10px 10px;
+	
+}
+.AboutUs{
+	width: 80%;
+	margin: 50px auto;
+	text-align: center;
+}
+.AboutUs img{
+	max-width: 100%;
+}
+.pmain4{
+	margin: 50px 60px 0px 60px;
+}
+.h1main4{
+	margin-top: 25px;
+	margin-bottom: -5px;
+}
+.form{
+	width: 50%;
+	margin: 50px auto;
+}
+.feedback_input{
+	color: #000000;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22px;
+	background-color: #FFFFFF;
+	padding: 13px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	border: 0px solid transparent;
+	border-bottom: 1px solid #000000;
+	font-family: 'Raleway', sans-serif;
+}
+textarea{
+	width: 100%;
+	height: 150px;
+	resize: vertical;
+}
+.button_submit{
+	color: #FFFFFF;
+	float: left;
+	width: 100%;
+	border: 0px solid transparent;
+	cursor: pointer;
+	background-color: #00796B;
+	border-radius: 6px;
+	font-size: 18px;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	transition: all 0.3s;
+	margin-top: -4px;
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
+}
+.button_submit:hover{
+	background-color: #FFFFFF;
+	color: #009688;
+	border: 1px solid #009688;
+}
+.space{
+	width: 0;
+	height: 74px;
+	background-color: #FFFFFF;
+	transition:.3s ease;
+}
+#map {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
