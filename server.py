@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import requestpip
+from flask import request
 from flask import url_for
 from flask import render_template, make_response
 from modules import dataScraper
