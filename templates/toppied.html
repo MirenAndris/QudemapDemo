@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title> Qudemap </title>
-	<link rel="stylesheet" href="CSS/style.css">
-	<script src="JS/script.js"></script>
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<script src="{{url_for('static',filename='script.js')}}"></script>
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,7 @@
 			<div class="header">
 				<div class="header_section">
 					<div class="headerlogo">
-						<a href="index.html"><img class="graficlogo" src="IMG/Qudemap1.jpg" alt="logo"></a>
+						<a href="index.html"><img class="graficlogo" src="{{url_for('static/images',filename='Qudemap1.jpg')}}" alt="logo"></a>
 					</div>
 					<div class="header_item headerButton">
 						<a href="index.html">Mājas lapa</a>
@@ -51,7 +51,7 @@
 				<div class="main2_TopPiedavajumi">
 					<div class="galeryNosConteiner">
 						<h1 class="galeryNos">TOP piedavājumi</h1>
-						<img src="IMG/galeryBar.png" alt="" class="galeryNos_bar">
+						<img src="{{url_for('static/images',filename='galeryBar.png')}}" alt="" class="galeryNos_bar">
 					</div>
 					<div class="galeryConteiner">
 						<div class="galery">
@@ -109,7 +109,7 @@
 				<div class="main2_JauniePiedavajumi">
 					<div class="galeryNosConteiner">
 						<h1 class="galeryNos">Jaunie piedavājumi</h1>
-						<img src="IMG/galeryBar.png" alt="" class="galeryNos_bar">
+						<img src="{{url_for('static/images',filename='galeryBar.png')}}" alt="" class="galeryNos_bar">
 					</div>
 					<div class="galeryConteiner">
 						<div class="galery">
@@ -167,7 +167,7 @@
 				<div class="main2_VisiSludinajumu">
 					<div class="galeryNosConteiner">
 						<h1 class="galeryNos">Visi sludinājumi</h1>
-						<img src="IMG/galeryBar.png" alt="" class="galeryNos_bar">
+						<img src="{{url_for('static/images',filename='galeryBar.png')}}" alt="" class="galeryNos_bar">
 					</div>
 					<div class="galeryConteiner">
 						<div class="galery">
