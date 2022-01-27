@@ -1,24 +1,17 @@
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 import re
-
-#pievienot beautifulsoup4 pie requirements.txt GitHubā
 
 def apstrada_lapu(url):
     r = requests.get(url)
-    html = r.text
-    soup = BeautifulSoup(html, 'html.parser')
-    return soup
+    return r.text
 
-def scrapeData(url, filters):
-    data = []
-    imgURLdata = []	
-    html = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/")
-
-    data = html.find_all('img', class_="isfoto foto_list")
-    for row in data:
-        imageURL = re.findall('<img.*?src="(.*?)"[^>]+>/g',row)
-        imgURLdata.append(imageURL)
-    return imgURLdata
-
-#scrapeData ("","")
+def scrapeImg(url, filters):
+    imgData = []
+    htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/") 
+    soup = BeautifulSoup(htmldata, 'html.parser') 
+    for item in soup.find_all('img'):
+        txt = item['src']
+        if txt[-3:len(txt)] == "jpg" or txt == "https://i.ss.lv/img/buy/homes.lv.gif" or txt == "https://i.ss.lv/img/n.home.gif?v=2":
+            imgData.append(txt)
+    return imgData
