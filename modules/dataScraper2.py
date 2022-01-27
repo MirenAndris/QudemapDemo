@@ -1,6 +1,5 @@
-import requests
+from pip._vendor import requests
 from bs4 import BeautifulSoup
-import re
 
 def apstrada_lapu(url):
     r = requests.get(url)
@@ -18,7 +17,14 @@ def scrapeImg(url, filters):
 
 def scrapeNos(url, filters):
     nosData = []
+    txt = ""
     htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/") 
-    soup = BeautifulSoup(htmldata, 'html.parser') 
-    
-    return nosData
+    soup = BeautifulSoup(htmldata, 'html.parser')
+    tdclass = soup.find_all('td', class_="msga2-o pp6")
+    for tr in soup.find_all('tbody'):
+      for tdclass in tr:
+        txt = soup.find_all('<b>')
+
+    return txt
+
+print(scrapeNos("", ""))
