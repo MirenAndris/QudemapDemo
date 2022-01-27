@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/index')
 def root():
     pictures = dataScraper.scrapeImg("","")
     return render_template("index.html",pictures=pictures)
