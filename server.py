@@ -15,6 +15,14 @@ def index():
 def raditKarti():
     return render_template("karte.html")
 
+@app.route('/toppied')
+def toppied():
+    return render_template("toppied.html")
+
+@app.route('/parmums')
+def parmums():
+    return render_template("parmums.html")
+
 @app.route('/health')
 def health():
   return "OK"
