@@ -13,16 +13,16 @@
 			<div class="header">
 				<div class="header_section">
 					<div class="headerlogo">
-						<a href="{{ url_for('/') }}"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
+						<a href="{{ url_for('index') }}"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="{{ url_for('/') }}">Mājas lapa</a>
+						<a href="{{ url_for('index') }}">Mājas lapa</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="{{ url_for('toppied.html') }}">TOP piedavājumi</a>
+						<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="karte.html">Karte</a>
+						<a href="{{ url_for('raditKarti') }}">Karte</a>
 					</div>
 					<div class="header_item headerButton">
 						<a href="parmums.html">Par mums</a>
