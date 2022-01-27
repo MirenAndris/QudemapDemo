@@ -15,9 +15,10 @@ def scrapeData(url, filters):
     imgURLdata = []	
     html = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/")
 
-    data = html.find_all('tr', class_='class="msga2 pp0"')
+    data = html.find_all('td', class_="msga2 pp0")
     for row in data:
         imageURL = re.findall('<img.*?src="(.*?)"[^>]+>/g',row)
         imgURLdata.append(imageURL)
     return imgURLdata
 
+#scrapeData ("","")
