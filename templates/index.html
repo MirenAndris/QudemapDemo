@@ -71,7 +71,7 @@
 				<div class="galeryNosConteiner">
 					<h1 class="galeryNos">Pēdējie pievienotie</h1>
 					<img src='static/images/galeryBar.png' alt="" class="galeryNos_bar">
-					<a class="skVisu" href="toppied.html">Skatīt visu</a>
+					<a class="skVisu" href="{{ url_for('toppied') }}">Skatīt visu</a>
 				</div>
 				<div class="galeryConteiner">
 					<div class="galery" id="mainGallery">
@@ -87,13 +87,13 @@
 		</main>
 		<footer class="footer">
 			<nav>
-				<a href="index.html">Mājas lapa</a>
-				<a href="toppied.html">TOP piedavājumi</a>
-				<a href="karte.html">Karte</a>
-				<a href="parmums.html">Par mums</a>
+				<a href="{{ url_for('index') }}">Mājas lapa</a>
+				<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+				<a href="{{ url_for('raditKarti') }}">Karte</a>
+				<a href="{{ url_for('parmums') }}">Par mums</a>
 			</nav>
 			<div class="footerlogo">
-				<a href="index.html"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
+				<a href="{{ url_for('index') }}"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
 			</div>
 		</footer>
 	</div>

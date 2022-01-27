@@ -19,19 +19,19 @@
 			<div class="header">
 				<div class="header_section">
 					<div class="headerlogo">
-						<a href="index.html"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
+						<a href="{{ url_for('index') }}"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="index.html">Mājas lapa</a>
+						<a href="{{ url_for('index') }}">Mājas lapa</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="toppied.html">TOP piedavājumi</a>
+						<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="karte.html">Karte</a>
+						<a href="{{ url_for('raditKarti') }}">Karte</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="parmums.html">Par mums</a>
+						<a href="{{ url_for('parmums') }}">Par mums</a>
 					</div>
 				</div>
 				<div class="header_section">
@@ -57,13 +57,13 @@
 		</main>
 		<footer class="footer">
 			<nav>
-				<a href="index.html">Mājas lapa</a>
-				<a href="toppied.html">TOP piedavājumi</a>
-				<a href="karte.html">Karte</a>
-				<a href="parmums.html">Par mums</a>
+				<a href="{{ url_for('index') }}">Mājas lapa</a>
+				<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+				<a href="{{ url_for('raditKarti') }}">Karte</a>
+				<a href="{{ url_for('parmums') }}">Par mums</a>
 			</nav>
 			<div class="footerlogo">
-				<a href="index.html"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
+				<a href="{{ url_for('index') }}"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
 			</div>
 		</footer>
 	</div>
