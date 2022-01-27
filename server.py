@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def root():
     pictures = dataScraper.scrapeImg("","")
-    return render_template("index.html"),pictures=pictures)
+    return render_template("index.html",pictures=pictures)
 
 @app.route('/karte')
 def raditKarti():
