@@ -15,3 +15,10 @@ def scrapeImg(url, filters):
         if txt[-3:len(txt)] == "jpg" or txt == "https://i.ss.lv/img/buy/homes.lv.gif" or txt == "https://i.ss.lv/img/n.home.gif?v=2":
             imgData.append(txt)
     return imgData
+
+def scrapeNos(url, filters):
+    nosData = []
+    htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/") 
+    soup = BeautifulSoup(htmldata, 'html.parser') 
+    
+    return nosData
