@@ -7,7 +7,7 @@ def apstrada_lapu(url):
 
 def scrapeImg(url, filters):
     imgData = []
-    htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/") 
+    htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/sell/") 
     soup = BeautifulSoup(htmldata, 'html.parser') 
     for item in soup.find_all('img'):
         txt = item['src']
@@ -17,14 +17,23 @@ def scrapeImg(url, filters):
 
 def scrapeNos(url, filters):
     nosData = []
-    txt = ""
-    htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/") 
+    nosData2 = []
+    tdData = []
+    htmldata = apstrada_lapu("https://www.ss.lv/lv/real-estate/flats/rezekne-and-reg/sell/") 
     soup = BeautifulSoup(htmldata, 'html.parser')
-    tdclass = soup.find_all('td', class_="msga2-o pp6")
-    for tr in soup.find_all('tbody'):
-      for tdclass in tr:
-        txt = soup.find_all('<b>')
-
-    return txt
+    for item in soup.find_all('td', class_="msga2-o pp6"):
+        tdData.append(item)
+        for x in range(0, len(tdData),7):
+            nosData.append(tdData[x])
+    print(len(nosData))
+    for item in nosData:
+        tmpString = ""
+        tmpString = str(item).replace('<td c="1" class="msga2-o pp6" nowrap="">',"")
+        tmpString = tmpString.replace("</td>", "")
+        tmpString = tmpString.replace("<b>", "")
+        tmpString = tmpString.replace("</b>", "")
+        nosData2.append(tmpString)
+    print(len(nosData2))
+    return nosData2
 
 print(scrapeNos("", ""))
