@@ -23,17 +23,15 @@ def scrapeNos(url, filters):
     soup = BeautifulSoup(htmldata, 'html.parser')
     for item in soup.find_all('td', class_="msga2-o pp6"):
         tdData.append(item)
-        for x in range(0, len(tdData),7):
-            nosData.append(tdData[x])
-    print(len(nosData))
-    for item in nosData:
+    for x in range(0, len(tdData), 7):
+        nosData.append(tdData[x])
+    for y in nosData:
         tmpString = ""
-        tmpString = str(item).replace('<td c="1" class="msga2-o pp6" nowrap="">',"")
+        tmpString = str(y).replace('<td c="1" class="msga2-o pp6" nowrap="">',"")
         tmpString = tmpString.replace("</td>", "")
         tmpString = tmpString.replace("<b>", "")
         tmpString = tmpString.replace("</b>", "")
         nosData2.append(tmpString)
-    print(len(nosData2))
     return nosData2
 
 print(scrapeNos("", ""))

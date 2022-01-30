@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     pictures = dataScraper.scrapeImg("","")
+    nosaukumi = dataScraper.
     return render_template("index.html",pictures=pictures)
 
 @app.route('/karte')
