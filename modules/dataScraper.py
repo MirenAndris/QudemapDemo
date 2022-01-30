@@ -36,7 +36,7 @@ def scrapeNos(url, filters):
         tmpString = tmpString.replace("<b>", "")
         tmpString = tmpString.replace("</b>", "")
         nosData2.append(tmpString)
-    return nosData2, tdData
+    return nosData2
 
 def scrapeM2(url, filters):
     m2Data = []

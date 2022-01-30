@@ -36,7 +36,7 @@ def scrapeNos(url, filters):
         tmpString = tmpString.replace("<b>", "")
         tmpString = tmpString.replace("</b>", "")
         nosData2.append(tmpString)
-    return nosData2, tdData
+    return nosData2
 
 def scrapeM2(url, filters):
     m2Data = []
@@ -97,3 +97,11 @@ def scrapeCena(url, filters):
         tmpString = tmpString.replace("</b>", "")
         cenaData2.append(tmpString)
     return cenaData2
+
+def datuApvien(imgData, nosData2):
+    imgData = scrapeImg("","")
+    nosData2 = scrapeNos("","")
+    apvDati = [imgData, nosData2]
+    return apvDati
+
+print(datuApvien("",""))

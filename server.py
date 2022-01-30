@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template, make_response
 from modules import dataScraper
+from modules import dataScraper2
 from flask import url_for
 import os
 
@@ -14,7 +15,8 @@ def index():
     ist = dataScraper.scrapeIst("","")
     stavs = dataScraper.scrapeStavs("","")
     cena = dataScraper.scrapeCena("","")
-    return render_template("index.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena)
+    apvDati = dataScraper2.datuApvien("","")
+    return render_template("index.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,apvDati=apvDati)
 
 @app.route('/karte')
 def raditKarti():
