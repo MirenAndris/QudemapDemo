@@ -23,7 +23,14 @@ def raditKarti():
 
 @app.route('/toppied')
 def toppied():
-    return render_template("toppied.html")
+    pictures = dataScraper.scrapeImg("","")
+    nosaukumi = dataScraper.scrapeNos("","")
+    m2 = dataScraper.scrapeM2("","")
+    ist = dataScraper.scrapeIst("","")
+    stavs = dataScraper.scrapeStavs("","")
+    cena = dataScraper.scrapeCena("","")
+    garums = len(pictures)
+    return render_template("toppied.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
 
 @app.route('/parmums')
 def parmums():
