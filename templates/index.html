@@ -76,15 +76,13 @@
 				<div class="galeryConteiner">
 					<div class="galery" id="mainGallery">
 						<!-- Automatically generated gallery content -->
-						{% for pic in pictures %}  
+						{% for x in 10 %}  
 							<div class="galeryItem">
-						    	<img src='{{pic}}' alt='{{pic}}' class="galery_img">
-						{% endfor %}
-						{% for n in nosaukumi %} 
-							<h2 class="galery_cenaNos">197 000 €</h2>
-							<p class="galery_infoAbout">126 m² | 289 m² | 7 ist. | 2 st.</p>
-							<p class="galery_ielasNos">'{{n}}'</p>
-							</div>
+						    	<img src='{{pic[x]}}' alt='{{pic}}' class="galery_img">
+								<p class="galery_ielasNos">nos in nosaukumi</p>
+								<h2 class="galery_cenaNos">197 000 €</h2>
+								<p class="galery_infoAbout">126 m² | 289 m² | 7 ist. | 2 st.</p>
+						  	</div>
 						{% endfor %}
 					</div>
 				</div>
