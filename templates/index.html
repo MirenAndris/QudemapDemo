@@ -79,9 +79,9 @@
 						{% for x in range(garums) %}  
 							<div class="galeryItem">
 						    	<img src='{{pictures[x]}}' alt='{{pictures[x]}}' class="galery_img">
-								<p class="galery_ielasNos">'{{nosaukumi[x]}}'</p>
-								<h2 class="galery_cenaNos">197 000 €</h2>
-								<p class="galery_infoAbout">126 m² | 289 m² | 7 ist. | 2 st.</p>
+								<p class="galery_ielasNos">{{nosaukumi[x]}}</p>
+								<h2 class="galery_cenaNos">{{cena[x]}}</h2>
+								<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}}} ist. | {{stavs[x]}} st.</p>
 						  	</div>
 						{% endfor %}
 					</div>
