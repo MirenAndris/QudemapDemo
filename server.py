@@ -16,7 +16,8 @@ def index():
     stavs = dataScraper.scrapeStavs("","")
     cena = dataScraper.scrapeCena("","")
     apvDati = dataScraper2.datuApvien("","")
-    return render_template("index.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,apvDati=apvDati)
+    garums = len(pictures)
+    return render_template("index.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,apvDati=apvDati,garums=garums)
 
 @app.route('/karte')
 def raditKarti():
