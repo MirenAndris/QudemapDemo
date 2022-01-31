@@ -97,11 +97,3 @@ def scrapeCena(url, filters):
         tmpString = tmpString.replace("</b>", "")
         cenaData2.append(tmpString)
     return cenaData2
-
-def datuApvien(imgData, nosData2):
-    imgData = scrapeImg("","")
-    nosData2 = scrapeNos("","")
-    apvDati = [imgData, nosData2]
-    return apvDati
-
-print(datuApvien("",""))
