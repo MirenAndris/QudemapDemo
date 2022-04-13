@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template, make_response
 from modules import dataScraper
 from flask import url_for
+from flask import render_template, make_response
 import os
 
 app = Flask(__name__)
@@ -15,11 +16,29 @@ def index():
     stavs = dataScraper.scrapeStavs("","")
     cena = dataScraper.scrapeCena("","")
     garums = len(pictures)
-    return render_template("index.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+    if not request.cookies.get('language'):
+        res = make_response('Set language')
+        res.set_cookie('language', 'latvian')
+        return render_template("indexLV.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+    else:
+        language = request.cookies.get('language')
+        if language=='latvian':
+            return render_template("indexLV.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+        else:
+            return render_template("indexEN.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
 
 @app.route('/karte')
 def raditKarti():
-    return render_template("karte.html")
+    if not request.cookies.get('language'):
+        res = make_response('Set language')
+        res.set_cookie('language', 'latvian')
+        return render_template("karteLV.html")
+    else:
+        language = request.cookies.get('language')
+        if language=='latvian':
+            return render_template("karteLV.html")
+        else:
+            return render_template("karteEN.html")
 
 @app.route('/toppied')
 def toppied():
@@ -30,11 +49,29 @@ def toppied():
     stavs = dataScraper.scrapeStavs("","")
     cena = dataScraper.scrapeCena("","")
     garums = len(pictures)
-    return render_template("toppied.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+    if not request.cookies.get('language'):
+        res = make_response('Set language')
+        res.set_cookie('language', 'latvian')
+        return render_template("toppiedLV.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+    else:
+        language = request.cookies.get('language')
+        if language=='latvian':
+            return render_template("toppiedLV.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+        else:
+            return render_template("toppiedEN.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
 
 @app.route('/parmums')
 def parmums():
-    return render_template("parmums.html")
+    if not request.cookies.get('language'):
+        res = make_response('Set language')
+        res.set_cookie('language', 'latvian')
+        return render_template("parmumsLV.html")
+    else:
+        language = request.cookies.get('language')
+        if language=='latvian':
+            return render_template("parmumsLV.html")
+        else:
+            return render_template("parmumsEN.html")
 
 @app.route('/health')
 def health():
