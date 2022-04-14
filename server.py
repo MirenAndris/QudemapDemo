@@ -3,6 +3,7 @@ from flask import render_template, make_response
 from modules import dataScraper
 from flask import url_for
 from flask import render_template, make_response
+from flask import request
 import os
 
 app = Flask(__name__)
