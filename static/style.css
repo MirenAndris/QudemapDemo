@@ -329,16 +329,19 @@ textarea{
 	border: 1px solid #009688;
 }
 .button_lang{
-	color: #FFFFFF;
-	border: 0px solid transparent;
+	padding: 10px 0px;
+	font-size: 20px;
+	margin-left: 5px;
 	background-color: #00796B;
 	border-radius: 6px;
-	font-family: 'Raleway', sans-serif;
+	cursor: pointer;
 }
 .button_lang:hover{
 	background-color: #FFFFFF;
-	color: #009688;
-	border: 1px solid #009688;
+	transition: 0.5s;
+}
+.button_lang:not(:hover){
+	transition: 0.5s;
 }
 .space{
 	width: 0;
