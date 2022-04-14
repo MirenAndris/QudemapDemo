@@ -6,7 +6,7 @@
 	<script src="{{url_for('static',filename='script.js')}}" type="text/javascript"></script>
     	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	
+
 	<script src="{{url_for('static',filename='scriptLang.js')}}" type="text/javascript"></script>
 </head>
 <body>
@@ -35,9 +35,8 @@
 						<ul class="actionList">
 							<li><a href="#">LAT</a>
 								<ul>
-									<li><a class="actionList_action" href="#">LAT</a></li>
-									<li><a class="actionList_action" href="#">RU</a></li>
-									<li><a class="actionList_action" href="#">ENG</a></li>
+									<li><button onclick="setLanguageLV();" class="actionList_action">LAT</button></li>
+									<li><button onclick="setLanguageLV();" class="actionList_action">ENG</button></li>
 								</ul>
 							</li>
 						</ul>
