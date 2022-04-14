@@ -12,10 +12,10 @@ window.onload = (event) => {
 	], function(
 	Map, CSVLayer, Color, SimpleMarkerSymbol, SimpleRenderer, InfoTemplate, esriConfig
 	) {
-	// Use CORS
-	esriConfig.defaults.io.corsEnabledServers.push("data.gov.lv"); // supports CORS
-	// Use proxy if the server doesn't support CORS
-	// esriConfig.defaults.io.proxyUrl = "/proxy/";
+	//Use CORS
+	esriConfig.defaults.io.corsEnabledServers.push("data.gov.lv"); //supports CORS
+	//Use proxy if the server doesn't support CORS
+	//esriConfig.defaults.io.proxyUrl = "/proxy/";
 	map = new Map("map", {
 	basemap: "gray",
 	center: [ 24.1052,56.9496 ],
