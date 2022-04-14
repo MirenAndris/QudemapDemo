@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Qudemap </title>
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<script src="{{url_for('static',filename='script.js')}}"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<script src="{{url_for('static',filename='scriptLang.js')}}" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="header">
+				<div class="header_section">
+					<div class="headerlogo">
+						<a href="{{ url_for('index') }}"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('index') }}">Mājas lapa</a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('raditKarti') }}">Karte</a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('parmums') }}">Par mums</a>
+					</div>
+				</div>
+				<div class="header_section">
+					<nav>
+						<ul class="actionList">
+							<li color="liLAT"><a href="#">LAT</a>
+								<ul>
+									<li><a class="actionList_action" href="#">LAT</a></li>
+									<li><a class="actionList_action" href="#">RU</a></li>
+									<li><a class="actionList_action" href="#">ENG</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_item_headerButton2">
+						<a href="https://www.ss.lv/lv/new/" class="hB2">Ievietot sludinājumu</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main4">
+				<div class="AboutUs">
+					<img src='static/images/aboutuscrop.jpg' alt="" class="aboutusImg">
+					<h1 class="h1main4">Īsa informācija par projektu</h1>
+					<p class="pmain4">
+						"Qudemap" ir tīmekļa vietne, ar kuras palīdzību lietotājs var ērtā formā apskatīt sludinājumus par nekustamā īpašuma pārdošanu, kā arī analizēt to atrašanās vietu kartē, izmantojot Latvijas piesārņoto vietu filtru. Vietni izstrādāja Austrumu Tehnoloģijas vidusskolas 11. klases skolnieks Andris Gedus.
+					</p>
+					<p class="pmain4">
+						Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla.
+					</p>
+					<p class="pmain4">
+						Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+					</p>
+					<h1 class="h1main4">Sazinies ar mums</h1>
+					<p class="pmain4">Ja pamanāt neprecizitāti vai konstatējat kļūdu vietnes darbībā, lūdzu, informējiet tehniskos departamentus, aizpildot zemāk esošo formu.</p>
+				</div>
+				<div class="contact">
+					<form class="form">
+						<p><input type="text" name="name" class="feedback_input" placeholder="Vārds, Uzvārds"></p>
+						<p><input type="email" name="email" class="feedback_input" placeholder="E-pasts"></p>
+						<p><textarea name="text" cols="30" rows="10" placeholder="Ziņa" class="feedback_input"></textarea></p>
+						<input type="submit" value="Iesniegt ziņu" class="button_submit">
+						<div class="space"></div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<nav>
+				<a href="{{ url_for('index') }}">Mājas lapa</a>
+				<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+				<a href="{{ url_for('raditKarti') }}">Karte</a>
+				<a href="{{ url_for('parmums') }}">Par mums</a>
+			</nav>
+			<div class="footerlogo">
+				<a href="{{ url_for('index') }}"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

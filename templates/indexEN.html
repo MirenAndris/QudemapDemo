@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Qudemap </title>
+	<script src="{{url_for('static',filename='script.js')}}" type="text/javascript"></script>
+    	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<script src="{{url_for('static',filename='scriptLang.js')}}" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="header">
+				<div class="header_section">
+					<div class="headerlogo">
+						<a href="{{ url_for('index') }}"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('index') }}">Mājas lapa</a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('raditKarti') }}">Karte</a>
+					</div>
+					<div class="header_item headerButton">
+						<a href="{{ url_for('parmums') }}">Par mums</a>
+					</div>
+				</div>
+				<div class="header_section">
+					<nav>
+						<ul class="actionList">
+							<li><a href="#">LAT</a>
+								<ul>
+									<li><button onclick="setLanguageLV();" class="actionList_action">LAT</button></li>
+									<li><button onclick="setLanguageLV();" class="actionList_action">ENG</button></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_item_headerButton2">
+						<a href="https://www.ss.lv/lv/new/" class="hB2">Ievietot sludinājumu</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="indexFrom">
+				<div class="indexForm1">
+					<form class="indexFform">
+						<p class="checkboxIndexP">Dzīvoklis <input type="checkbox" name="dzivoklis" value="yes" class="checkboxIndex"></p>
+						<p class="checkboxIndexP">Māja <input type="checkbox" name="maja" value="yes" class="checkboxIndex"></p>
+						<nav>
+							<ul class="actionList">
+								<li><a class="liCena" href="#">Cena</a>
+									<ul>
+										<li><input placeholder="no €" type="text" name="cenaNo" value="" class="input_cena"></li>
+										<li><input placeholder="līdz €" type="text" name="cenaLidz" value="" class="input_cena"></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<nav>
+							<ul class="actionList">
+								<li><a class="input_mekllogs" href="#">Pilsēta, adrese...</a>
+									<ul class="liconteiner">
+										<li><a class="actionList_action" href="#">Rīga</a></li>
+										<li><a class="actionList_action" href="#">Jūrmala</a></li>
+										<li><a class="actionList_action" href="#">Rīgas rajons </a></li>
+										<li><a class="actionList_action" href="#">Aizkraukle un rajons</a></li>
+										<li><a class="actionList_action" href="#">Alūksne un rajons</a></li>
+										<li><a class="actionList_action" href="#">Balvi un rajons</a></li>
+										<li><a class="actionList_action" href="#">Bauska un rajons</a></li>
+										<li><a class="actionList_action" href="#">Cēsis un rajons</a></li>
+										<li><a class="actionList_action" href="#">Daugavpils un rajons</a></li>
+										<li><a class="actionList_action" href="#">Dobele un rajons</a></li>
+										<li><a class="actionList_action" href="#">Gulbene un rajons</a></li>
+										<li><a class="actionList_action" href="#">Jēkabpils un rajons</a></li>
+										<li><a class="actionList_action" href="#">Jelgava un rajons</a></li>
+										<li><a class="actionList_action" href="#">Krāslava un rajons</a></li>
+										<li><a class="actionList_action" href="#">Kuldīga un rajons</a></li>
+										<li><a class="actionList_action" href="#">Liepāja un rajons</a></li>
+										<li><a class="actionList_action" href="#">Limbaži un rajons</a></li>
+										<li><a class="actionList_action" href="#">Ludza un rajons</a></li>
+										<li><a class="actionList_action" href="#">Madona un rajons</a></li>
+										<li><a class="actionList_action" href="#">Ogre un rajons</a></li>
+										<li><a class="actionList_action" href="#">Preiļi un rajons</a></li>
+										<li><a class="actionList_action" href="#">Rēzekne un rajons</a></li>
+										<li><a class="actionList_action" href="#">Saldus un rajons</a></li>
+										<li><a class="actionList_action" href="#">Talsi un rajons</a></li>
+										<li><a class="actionList_action" href="#">Tukums un rajons</a></li>
+										<li><a class="actionList_action" href="#">Valka un rajons</a></li>
+										<li><a class="actionList_action" href="#">Valmiera un rajons</a></li>
+										<li><a class="actionList_action" href="#">Ventspils un rajons</a></li>
+										<li><a class="actionList_action" href="#">Cits</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<input type="submit" value="Meklēt" class="btnIndexForm">
+					</form>
+				</div>
+			</div>
+			<div class="main1">
+				<div class="galeryNosConteiner">
+					<h1 class="galeryNos">Pēdējie pievienotie</h1>
+					<img src='static/images/galeryBar.png' alt="" class="galeryNos_bar">
+					<a class="skVisu" href="{{ url_for('toppied') }}">Skatīt visu</a>
+				</div>
+				<div class="galeryConteiner">
+					<div class="galery" id="mainGallery">
+						<!-- Automatically generated gallery content -->
+						{% for x in range(garums) %}  
+							<div class="galeryItem">
+						    	<img src='{{pictures[x]}}' alt='{{pictures[x]}}' class="galery_img">
+								<p class="galery_ielasNos">{{nosaukumi[x]}}</p>
+								<h2 class="galery_cenaNos">{{cena[x]}}</h2>
+								<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} ist. | {{stavs[x]}} st.</p>
+						  	</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<nav>
+				<a href="{{ url_for('index') }}">Mājas lapa</a>
+				<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+				<a href="{{ url_for('raditKarti') }}">Karte</a>
+				<a href="{{ url_for('parmums') }}">Par mums</a>
+			</nav>
+			<div class="footerlogo">
+				<a href="{{ url_for('index') }}"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
