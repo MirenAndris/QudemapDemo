@@ -329,12 +329,13 @@ textarea{
 	border: 1px solid #009688;
 }
 .button_lang{
-	padding: 10px 0px;
-	font-size: 20px;
-	margin-left: 5px;
-	background-color: #00796B;
+	text-decoration: none;
+	padding: 20px 50px;
+	background: #00796B;
+	color: #FFFFFF;
 	border-radius: 6px;
-	cursor: pointer;
+	font-size: 20px;
+	transition: 0.5s;
 }
 .button_lang:hover{
 	background-color: #FFFFFF;
