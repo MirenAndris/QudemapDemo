@@ -26,7 +26,7 @@ def index():
         if language=='latvian':
             return render_template("indexLV.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
         else:
-            return render_template("indexEN.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
+            return render_template("indexEN1.html",pictures=pictures,nosaukumi=nosaukumi,m2=m2,ist=ist,stavs=stavs,cena=cena,garums=garums)
 
 @app.route('/karte')
 def raditKarti():
