@@ -17,16 +17,16 @@
 						<a href="{{ url_for('index') }}"><img class="graficlogo" src='static/images/Qudemap1.jpg' alt="logo"></a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="{{ url_for('index') }}">Mājas lapa</a>
+						<a href="{{ url_for('index') }}">Home page</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
+						<a href="{{ url_for('toppied') }}">TOP advertisements</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="{{ url_for('raditKarti') }}">Karte</a>
+						<a href="{{ url_for('raditKarti') }}">Map</a>
 					</div>
 					<div class="header_item headerButton">
-						<a href="{{ url_for('parmums') }}">Par mums</a>
+						<a href="{{ url_for('parmums') }}">About us</a>
 					</div>
 				</div>
 				<div class="header_section">
@@ -35,7 +35,7 @@
 						<button onclick="setLanguageEN();" class="button_lang">ENG</button>
 					</nav>
 					<div class="header_item_headerButton2">
-						<a href="https://www.ss.lv/lv/new/" class="hB2">Ievietot sludinājumu</a>
+						<a href="https://www.ss.lv/lv/new/" class="hB2">Add a new advertisement</a>
 					</div>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 			<div class="main2">
 				<div class="main2_TopPiedavajumi">
 					<div class="galeryNosConteiner">
-						<h1 class="galeryNos">TOP piedavājumi</h1>
+						<h1 class="galeryNos">TOP advertisements</h1>
 						<img src='static/images/galeryBar.png' alt="" class="galeryNos_bar">
 					</div>
 					<div class="galeryConteiner">
@@ -55,7 +55,7 @@
 									<img src='{{pictures[x]}}' alt='{{pictures[x]}}' class="galery_img">
 									<p class="galery_ielasNos">{{nosaukumi[x]}}</p>
 									<h2 class="galery_cenaNos">{{cena[x]}}</h2>
-									<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} ist. | {{stavs[x]}} st.</p>
+									<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} room(-s) | {{stavs[x]}} floor</p>
 								  </div>
 							{% endfor %}
 						</div>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="main2_JauniePiedavajumi">
 					<div class="galeryNosConteiner">
-						<h1 class="galeryNos">Jaunie piedavājumi</h1>
+						<h1 class="galeryNos">New advertisements</h1>
 						<img src='static/images/galeryBar.png' alt="" class="galeryNos_bar">
 					</div>
 					<div class="galeryConteiner">
@@ -74,7 +74,7 @@
 									<img src='{{pictures[x]}}' alt='{{pictures[x]}}' class="galery_img">
 									<p class="galery_ielasNos">{{nosaukumi[x]}}</p>
 									<h2 class="galery_cenaNos">{{cena[x]}}</h2>
-									<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} ist. | {{stavs[x]}} st.</p>
+									<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} room(-s) | {{stavs[x]}} floor</p>
 								  </div>
 							{% endfor %}
 						</div>
@@ -82,7 +82,7 @@
 				</div>
 				<div class="main2_VisiSludinajumu">
 					<div class="galeryNosConteiner">
-						<h1 class="galeryNos">Visi sludinājumi</h1>
+						<h1 class="galeryNos">All advertisements</h1>
 						<img src='static/images/galeryBar.png' alt="" class="galeryNos_bar">
 					</div>
 					<div class="galeryConteiner">
@@ -93,7 +93,7 @@
 									<img src='{{pictures[x]}}' alt='{{pictures[x]}}' class="galery_img">
 									<p class="galery_ielasNos">{{nosaukumi[x]}}</p>
 									<h2 class="galery_cenaNos">{{cena[x]}}</h2>
-									<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} ist. | {{stavs[x]}} st.</p>
+									<p class="galery_infoAbout">{{m2[x]}} m² | {{ist[x]}} room(-s) | {{stavs[x]}} floor</p>
 								  </div>
 							{% endfor %}
 						</div>
@@ -103,10 +103,10 @@
 		</main>
 		<footer class="footer">
 			<nav>
-				<a href="{{ url_for('index') }}">Mājas lapa</a>
-				<a href="{{ url_for('toppied') }}">TOP piedavājumi</a>
-				<a href="{{ url_for('raditKarti') }}">Karte</a>
-				<a href="{{ url_for('parmums') }}">Par mums</a>
+				<a href="{{ url_for('index') }}">Hpme page</a>
+				<a href="{{ url_for('toppied') }}">TOP advertisements</a>
+				<a href="{{ url_for('raditKarti') }}">Map</a>
+				<a href="{{ url_for('parmums') }}">About us</a>
 			</nav>
 			<div class="footerlogo">
 				<a href="{{ url_for('index') }}"><img class="footerGRAFlogo" src='static/images/Qudemap1.png' alt="logo"></a>
