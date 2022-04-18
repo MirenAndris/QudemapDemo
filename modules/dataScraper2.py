@@ -82,3 +82,18 @@ def scrapeStavs(url, filters):
         tmpString = tmpString.replace("</b>", "")
         stData2.append(tmpString)
     return stData2
+
+def scrapeCena(url, filters):
+    cenaData = []
+    cenaData2 = []
+    tdData = scrapeData("")
+    for x in range(6, len(tdData), 7):
+        cenaData.append(tdData[x])
+    for y in cenaData:
+        tmpString = ""
+        tmpString = str(y).replace('<td c="1" class="msga2-o pp6" nowrap="">',"")
+        tmpString = tmpString.replace("</td>", "")
+        tmpString = tmpString.replace("<b>", "")
+        tmpString = tmpString.replace("</b>", "")
+        cenaData2.append(tmpString)
+    return cenaData2
