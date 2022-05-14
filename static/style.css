@@ -334,14 +334,17 @@ textarea{
 	background: #00796B;
 	color: #FFFFFF;
 	border-radius: 6px;
+	border: 0px;
 	font-size: 20px;
 	transition: 0.5s;
 }
 .button_lang:hover{
+	border: 0px;
 	background-color: #FFFFFF;
 	transition: 0.5s;
 }
 .button_lang:not(:hover){
+	border: 0px;
 	transition: 0.5s;
 }
 .space{
